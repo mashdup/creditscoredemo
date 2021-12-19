@@ -59,7 +59,6 @@ class ProgressView: UIView {
     
     func setProgress(_ progress: CGFloat, with duration: TimeInterval = 0.3, animated: Bool = true) {
         
-        
         CATransaction.begin()
         CATransaction.disableActions()
         if animated {

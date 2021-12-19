@@ -1,0 +1,22 @@
+{
+  "images" : [
+    {
+      "filename" : "macOS-Monterey-wallpaper-Light.jpeg",
+      "idiom" : "universal"
+    },
+    {
+      "appearances" : [
+        {
+          "appearance" : "luminosity",
+          "value" : "dark"
+        }
+      ],
+      "filename" : "macOS-Monterey-wallpaper-Dark.jpeg",
+      "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

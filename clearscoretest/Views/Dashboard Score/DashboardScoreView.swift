@@ -62,6 +62,12 @@ class DashboardScoreView: UIView {
         return l
     }()
     
+    private lazy var blurEffectView: UIVisualEffectView = {
+        let v = UIVisualEffectView(effect: UIBlurEffect(style: .systemMaterial))
+        v.translatesAutoresizingMaskIntoConstraints = false
+        return v
+    }()
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         setup()
@@ -79,8 +85,10 @@ class DashboardScoreView: UIView {
     }
     
     func setup() {
+        clipsToBounds = true
         layer.borderWidth = 2
         
+        addSubview(blurEffectView)
         addSubview(progressView)
         addSubview(stackView)
         
@@ -88,6 +96,7 @@ class DashboardScoreView: UIView {
         stackView.addArrangedSubview(scoreLabel)
         stackView.addArrangedSubview(subtitleLabel)
         
+        blurEffectView.pinToParentView()
         progressView.pinToParentView(UIEdgeInsets(top: 8, left: 8, bottom: 8, right: 8))
         stackView.pinToParentCenter()
         

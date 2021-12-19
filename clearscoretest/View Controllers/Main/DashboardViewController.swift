@@ -23,6 +23,13 @@ class DashboardViewController: UIViewController {
         return d
     }()
     
+    private lazy var backgroundImageView: UIImageView = {
+        let i = UIImageView(image: UIImage(named: "dashboardBackground"))
+        i.translatesAutoresizingMaskIntoConstraints = false
+        i.contentMode = .scaleAspectFill
+        return i
+    }()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setup()
@@ -35,7 +42,10 @@ class DashboardViewController: UIViewController {
     }
     
     func setupViews() {
+        view.addSubview(backgroundImageView)
         view.addSubview(dashboardScoreView)
+        
+        backgroundImageView.pinToParentView()
         dashboardScoreView.pinToParentCenter()
         
         NSLayoutConstraint.activate([

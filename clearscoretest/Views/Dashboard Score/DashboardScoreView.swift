@@ -112,7 +112,9 @@ class DashboardScoreView: UIView {
                         self?.stackView.alpha = 1
                     })
                 }
-                self?.progressView.setProgress(CGFloat(score)/CGFloat(max))
+                let progress = CGFloat(score)/CGFloat(max)
+                self?.progressView.setProgress(progress)
+                self?.scoreLabel.textColor = UIColor.progressColour(progress)
             }
         }).store(in: &viewModel.subscribers)
     }

@@ -15,14 +15,12 @@ class DashboardViewModel {
     
     private let service: DashboardServiceProtocol = DashboardService()
     
-    func fetchDashboardValues() {
+    func fetchDashboardValues(_ completion: @escaping ((Swift.Result<Dashboard, Error>) -> Void)) {
         service.getDashboardValues { [weak self] result in
-            switch result {
-            case .success(let dashboard):
+            if case let .success(dashboard) = result {
                 self?.dashboard = dashboard
-            case .failure(let error):
-                print(error)
             }
+            completion(result)
         }
     }
 }

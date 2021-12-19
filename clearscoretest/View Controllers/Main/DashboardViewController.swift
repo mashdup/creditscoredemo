@@ -47,10 +47,11 @@ class DashboardViewController: UIViewController {
         guard let viewModel = viewModel else { return }
 
         dashboardScoreView.viewModel = viewModel
-//        viewModel.$dashboard.sink(receiveValue: { [weak self] updatedDateboard in
-////            print("RETURNED WITH COMBINE")
-////            print(updatedDateboard)
-//        }).store(in: &viewModel.subscribers)
-        viewModel.fetchDashboardValues()
+        
+        viewModel.fetchDashboardValues { [weak self] result in
+            if case let .failure(error) = result {
+                self?.coordinator?.handleError(error)
+            }
+        }
     }
 }

@@ -38,4 +38,24 @@ class AppCoordinator {
         self.navigationController.pushViewController(vc, animated: false)
         self.navigationController.setViewControllers([vc], animated: false)
     }
+    
+    /**
+     For Error Handling, we will use UIAlertViewController to present the Error.
+     However, we can choose to display something else if needed
+     */
+    func handleError(_ error: Error) {
+        let error = error as NSError
+        let alert = UIAlertController(title: "ClearScore", message: error.localizedDescription, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+        presentAlert(alert)
+        
+    }
+    
+    func presentAlert(_ alert: UIAlertController) {
+        var presenter: UIViewController? = navigationController
+        while presenter?.presentedViewController != nil {
+            presenter = presenter?.presentedViewController
+        }
+        presenter?.present(alert, animated: true, completion: nil)
+    }
 }

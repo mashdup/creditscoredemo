@@ -47,9 +47,12 @@ class DashboardViewController: UIViewController {
         
         backgroundImageView.pinToParentView()
         dashboardScoreView.pinToParentCenter()
-        
+        let widthConstraint = dashboardScoreView.widthAnchor.constraint(equalTo: view.widthAnchor, multiplier: 0.8)
+        widthConstraint.priority = .defaultLow
+        let heightConstraint = dashboardScoreView.widthAnchor.constraint(lessThanOrEqualTo: view.heightAnchor, multiplier: 0.8)
         NSLayoutConstraint.activate([
-            dashboardScoreView.widthAnchor.constraint(equalTo: view.widthAnchor, multiplier: 0.8)
+            widthConstraint,
+            heightConstraint
         ])
     }
     

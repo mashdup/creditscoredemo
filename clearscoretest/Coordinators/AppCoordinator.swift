@@ -34,6 +34,7 @@ class AppCoordinator {
     func start() {
         let vc = DashboardViewController()
         vc.coordinator = self
+        vc.viewModel = DashboardViewModel()
         self.navigationController.pushViewController(vc, animated: false)
         self.navigationController.setViewControllers([vc], animated: false)
     }

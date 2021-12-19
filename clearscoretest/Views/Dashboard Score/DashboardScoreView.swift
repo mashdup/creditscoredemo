@@ -9,6 +9,12 @@ import UIKit
 
 class DashboardScoreView: UIView {
     
+    weak var viewModel: DashboardViewModel? {
+        didSet {
+            bindViewModel()
+        }
+    }
+    
     lazy var progressView: ProgressView = {
         let p = ProgressView()
         p.translatesAutoresizingMaskIntoConstraints = false
@@ -22,6 +28,7 @@ class DashboardScoreView: UIView {
         s.alignment = .center
         s.distribution = .fill
         s.spacing = 8
+        s.alpha = 0
         return s
     }()
     
@@ -48,7 +55,7 @@ class DashboardScoreView: UIView {
     private lazy var subtitleLabel: UILabel = {
         let l = UILabel()
         l.translatesAutoresizingMaskIntoConstraints = false
-        l.text = "DASHBOARD_OUT_OF".localised() + " 700"
+        l.text = "DASHBOARD_OUT_OF".localised()
         l.font = .preferredFont(forTextStyle: .body)
         l.adjustsFontForContentSizeCategory = true
         l.textColor = .primaryFont
@@ -72,7 +79,6 @@ class DashboardScoreView: UIView {
     }
     
     func setup() {
-        
         layer.borderWidth = 2
         
         addSubview(progressView)
@@ -89,5 +95,25 @@ class DashboardScoreView: UIView {
             stackView.widthAnchor.constraint(lessThanOrEqualTo: widthAnchor),
             stackView.heightAnchor.constraint(lessThanOrEqualTo: heightAnchor)
         ])
+    }
+    
+    func bindViewModel() {
+        guard let viewModel = viewModel else { return }
+
+        viewModel.$dashboard.sink(receiveValue: { [weak self] updatedDateboard in
+            guard let updatedDateboard = updatedDateboard,
+                  let score = updatedDateboard.creditReportInfo?.score,
+                  let max = updatedDateboard.creditReportInfo?.maxScoreValue else { return }
+            DispatchQueue.main.async {
+                self?.subtitleLabel.text = "DASHBOARD_OUT_OF".localised() + " \(max)"
+                self?.scoreLabel.text = "\(score)"
+                if self?.stackView.alpha == 0 {
+                    UIView.animate(withDuration: 0.3, animations: {
+                        self?.stackView.alpha = 1
+                    })
+                }
+                self?.progressView.setProgress(CGFloat(score)/CGFloat(max))
+            }
+        }).store(in: &viewModel.subscribers)
     }
 }

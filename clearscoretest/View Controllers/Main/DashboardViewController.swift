@@ -6,10 +6,17 @@
 //
 
 import UIKit
+import Combine
 
 class DashboardViewController: UIViewController {
     
     weak var coordinator: AppCoordinator?
+    
+    var viewModel: DashboardViewModel? {
+        didSet {
+            bindViewModel()
+        }
+    }
     
     private lazy var dashboardScoreView: DashboardScoreView = {
         let d = DashboardScoreView()
@@ -20,11 +27,6 @@ class DashboardViewController: UIViewController {
         super.viewDidLoad()
         setup()
         setupViews()
-    }
-    
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-        dashboardScoreView.progressView.progress = 0.8
     }
     
     func setup() {
@@ -39,5 +41,16 @@ class DashboardViewController: UIViewController {
         NSLayoutConstraint.activate([
             dashboardScoreView.widthAnchor.constraint(equalTo: view.widthAnchor, multiplier: 0.8)
         ])
+    }
+    
+    func bindViewModel() {
+        guard let viewModel = viewModel else { return }
+
+        dashboardScoreView.viewModel = viewModel
+//        viewModel.$dashboard.sink(receiveValue: { [weak self] updatedDateboard in
+////            print("RETURNED WITH COMBINE")
+////            print(updatedDateboard)
+//        }).store(in: &viewModel.subscribers)
+        viewModel.fetchDashboardValues()
     }
 }

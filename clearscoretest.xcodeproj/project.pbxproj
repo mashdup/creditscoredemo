@@ -10,9 +10,17 @@
 		512F13DB276F8E4D007298B0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 512F13DA276F8E4D007298B0 /* AppDelegate.swift */; };
 		512F13DD276F8E4D007298B0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 512F13DC276F8E4D007298B0 /* SceneDelegate.swift */; };
 		512F13DF276F8E4D007298B0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 512F13DE276F8E4D007298B0 /* ViewController.swift */; };
-		512F13E2276F8E4D007298B0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 512F13E0276F8E4D007298B0 /* Main.storyboard */; };
 		512F13E4276F8E4E007298B0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 512F13E3276F8E4E007298B0 /* Assets.xcassets */; };
 		512F13E7276F8E4E007298B0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 512F13E5276F8E4E007298B0 /* LaunchScreen.storyboard */; };
+		512F13F2276F8F75007298B0 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 512F13F1276F8F75007298B0 /* AppCoordinator.swift */; };
+		512F13F5276F909C007298B0 /* Colours.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 512F13F4276F909C007298B0 /* Colours.xcassets */; };
+		512F13F8276F9123007298B0 /* DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 512F13F7276F9123007298B0 /* DashboardViewController.swift */; };
+		512F13FA276F91DD007298B0 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 512F13F9276F91DD007298B0 /* Localizable.strings */; };
+		512F13FD276F9231007298B0 /* String+Localisable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 512F13FC276F9231007298B0 /* String+Localisable.swift */; };
+		512F1401276F94D3007298B0 /* DashboardScoreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 512F1400276F94D3007298B0 /* DashboardScoreView.swift */; };
+		512F1403276F950A007298B0 /* ProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 512F1402276F950A007298B0 /* ProgressView.swift */; };
+		512F1405276F95E2007298B0 /* UIView+Constraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 512F1404276F95E2007298B0 /* UIView+Constraints.swift */; };
+		E2E0A753C614B185D1E9FF33 /* Pods_clearscoretest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B5941C9065B9E0585F1CA89 /* Pods_clearscoretest.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,10 +28,20 @@
 		512F13DA276F8E4D007298B0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		512F13DC276F8E4D007298B0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		512F13DE276F8E4D007298B0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		512F13E1276F8E4D007298B0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		512F13E3276F8E4E007298B0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		512F13E6276F8E4E007298B0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		512F13E8276F8E4E007298B0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		512F13F1276F8F75007298B0 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
+		512F13F4276F909C007298B0 /* Colours.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colours.xcassets; sourceTree = "<group>"; };
+		512F13F7276F9123007298B0 /* DashboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewController.swift; sourceTree = "<group>"; };
+		512F13F9276F91DD007298B0 /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
+		512F13FC276F9231007298B0 /* String+Localisable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Localisable.swift"; sourceTree = "<group>"; };
+		512F1400276F94D3007298B0 /* DashboardScoreView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardScoreView.swift; sourceTree = "<group>"; };
+		512F1402276F950A007298B0 /* ProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressView.swift; sourceTree = "<group>"; };
+		512F1404276F95E2007298B0 /* UIView+Constraints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Constraints.swift"; sourceTree = "<group>"; };
+		6B5941C9065B9E0585F1CA89 /* Pods_clearscoretest.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_clearscoretest.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E7DFFAE9362F4E8A7A5D3DE8 /* Pods-clearscoretest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-clearscoretest.debug.xcconfig"; path = "Target Support Files/Pods-clearscoretest/Pods-clearscoretest.debug.xcconfig"; sourceTree = "<group>"; };
+		EC73DD33A05E4502BC9DFFED /* Pods-clearscoretest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-clearscoretest.release.xcconfig"; path = "Target Support Files/Pods-clearscoretest/Pods-clearscoretest.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +49,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E2E0A753C614B185D1E9FF33 /* Pods_clearscoretest.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,6 +61,8 @@
 			children = (
 				512F13D9276F8E4D007298B0 /* clearscoretest */,
 				512F13D8276F8E4D007298B0 /* Products */,
+				9B9C002F8A9111FEE04141B1 /* Pods */,
+				DED8741E258D67D79AD17981 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,15 +77,103 @@
 		512F13D9276F8E4D007298B0 /* clearscoretest */ = {
 			isa = PBXGroup;
 			children = (
+				512F13F3276F9066007298B0 /* Assets */,
+				512F13EE276F8EFC007298B0 /* Coordinators */,
+				512F13FB276F9223007298B0 /* Extensions */,
+				512F13F0276F8F0F007298B0 /* Views */,
+				512F13EF276F8F04007298B0 /* View Controllers */,
 				512F13DA276F8E4D007298B0 /* AppDelegate.swift */,
 				512F13DC276F8E4D007298B0 /* SceneDelegate.swift */,
 				512F13DE276F8E4D007298B0 /* ViewController.swift */,
-				512F13E0276F8E4D007298B0 /* Main.storyboard */,
-				512F13E3276F8E4E007298B0 /* Assets.xcassets */,
 				512F13E5276F8E4E007298B0 /* LaunchScreen.storyboard */,
 				512F13E8276F8E4E007298B0 /* Info.plist */,
 			);
 			path = clearscoretest;
+			sourceTree = "<group>";
+		};
+		512F13EE276F8EFC007298B0 /* Coordinators */ = {
+			isa = PBXGroup;
+			children = (
+				512F13F1276F8F75007298B0 /* AppCoordinator.swift */,
+			);
+			path = Coordinators;
+			sourceTree = "<group>";
+		};
+		512F13EF276F8F04007298B0 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				512F13F6276F9118007298B0 /* Main */,
+			);
+			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		512F13F0276F8F0F007298B0 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				512F13FF276F94C5007298B0 /* Progress */,
+				512F13FE276F9498007298B0 /* Dashboard Score */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		512F13F3276F9066007298B0 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				512F13E3276F8E4E007298B0 /* Assets.xcassets */,
+				512F13F4276F909C007298B0 /* Colours.xcassets */,
+				512F13F9276F91DD007298B0 /* Localizable.strings */,
+			);
+			path = Assets;
+			sourceTree = "<group>";
+		};
+		512F13F6276F9118007298B0 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				512F13F7276F9123007298B0 /* DashboardViewController.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		512F13FB276F9223007298B0 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				512F13FC276F9231007298B0 /* String+Localisable.swift */,
+				512F1404276F95E2007298B0 /* UIView+Constraints.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		512F13FE276F9498007298B0 /* Dashboard Score */ = {
+			isa = PBXGroup;
+			children = (
+				512F1400276F94D3007298B0 /* DashboardScoreView.swift */,
+			);
+			path = "Dashboard Score";
+			sourceTree = "<group>";
+		};
+		512F13FF276F94C5007298B0 /* Progress */ = {
+			isa = PBXGroup;
+			children = (
+				512F1402276F950A007298B0 /* ProgressView.swift */,
+			);
+			path = Progress;
+			sourceTree = "<group>";
+		};
+		9B9C002F8A9111FEE04141B1 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E7DFFAE9362F4E8A7A5D3DE8 /* Pods-clearscoretest.debug.xcconfig */,
+				EC73DD33A05E4502BC9DFFED /* Pods-clearscoretest.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		DED8741E258D67D79AD17981 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6B5941C9065B9E0585F1CA89 /* Pods_clearscoretest.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,6 +183,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 512F13EB276F8E4E007298B0 /* Build configuration list for PBXNativeTarget "clearscoretest" */;
 			buildPhases = (
+				492864BF228ADAB832DA0E4D /* [CP] Check Pods Manifest.lock */,
 				512F13D3276F8E4D007298B0 /* Sources */,
 				512F13D4276F8E4D007298B0 /* Frameworks */,
 				512F13D5276F8E4D007298B0 /* Resources */,
@@ -126,35 +236,59 @@
 			buildActionMask = 2147483647;
 			files = (
 				512F13E7276F8E4E007298B0 /* LaunchScreen.storyboard in Resources */,
+				512F13FA276F91DD007298B0 /* Localizable.strings in Resources */,
 				512F13E4276F8E4E007298B0 /* Assets.xcassets in Resources */,
-				512F13E2276F8E4D007298B0 /* Main.storyboard in Resources */,
+				512F13F5276F909C007298B0 /* Colours.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		492864BF228ADAB832DA0E4D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-clearscoretest-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		512F13D3276F8E4D007298B0 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				512F1401276F94D3007298B0 /* DashboardScoreView.swift in Sources */,
+				512F13F2276F8F75007298B0 /* AppCoordinator.swift in Sources */,
 				512F13DF276F8E4D007298B0 /* ViewController.swift in Sources */,
+				512F1405276F95E2007298B0 /* UIView+Constraints.swift in Sources */,
+				512F13FD276F9231007298B0 /* String+Localisable.swift in Sources */,
 				512F13DB276F8E4D007298B0 /* AppDelegate.swift in Sources */,
+				512F1403276F950A007298B0 /* ProgressView.swift in Sources */,
 				512F13DD276F8E4D007298B0 /* SceneDelegate.swift in Sources */,
+				512F13F8276F9123007298B0 /* DashboardViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		512F13E0276F8E4D007298B0 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				512F13E1276F8E4D007298B0 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		512F13E5276F8E4E007298B0 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -284,6 +418,7 @@
 		};
 		512F13EC276F8E4E007298B0 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E7DFFAE9362F4E8A7A5D3DE8 /* Pods-clearscoretest.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -293,7 +428,6 @@
 				INFOPLIST_FILE = clearscoretest/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -311,6 +445,7 @@
 		};
 		512F13ED276F8E4E007298B0 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EC73DD33A05E4502BC9DFFED /* Pods-clearscoretest.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -320,7 +455,6 @@
 				INFOPLIST_FILE = clearscoretest/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (

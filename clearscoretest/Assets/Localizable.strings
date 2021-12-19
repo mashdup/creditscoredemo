@@ -1,0 +1,11 @@
+/* 
+  Localizable.strings
+  clearscoretest
+
+  Created by Dillon Hoa on 19/12/2021.
+  
+*/
+
+"DASHBOARD" = "Dashboard";
+"DASHBOARD_CREDIT_TITLE" = "Your credit score is";
+"DASHBOARD_OUT_OF" = "out of";

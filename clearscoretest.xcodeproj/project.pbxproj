@@ -20,6 +20,7 @@
 		512F1401276F94D3007298B0 /* DashboardScoreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 512F1400276F94D3007298B0 /* DashboardScoreView.swift */; };
 		512F1403276F950A007298B0 /* ProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 512F1402276F950A007298B0 /* ProgressView.swift */; };
 		512F1405276F95E2007298B0 /* UIView+Constraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 512F1404276F95E2007298B0 /* UIView+Constraints.swift */; };
+		512F1407276FA936007298B0 /* UIColor+Asset.swift in Sources */ = {isa = PBXBuildFile; fileRef = 512F1406276FA936007298B0 /* UIColor+Asset.swift */; };
 		E2E0A753C614B185D1E9FF33 /* Pods_clearscoretest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B5941C9065B9E0585F1CA89 /* Pods_clearscoretest.framework */; };
 /* End PBXBuildFile section */
 
@@ -39,6 +40,7 @@
 		512F1400276F94D3007298B0 /* DashboardScoreView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardScoreView.swift; sourceTree = "<group>"; };
 		512F1402276F950A007298B0 /* ProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressView.swift; sourceTree = "<group>"; };
 		512F1404276F95E2007298B0 /* UIView+Constraints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Constraints.swift"; sourceTree = "<group>"; };
+		512F1406276FA936007298B0 /* UIColor+Asset.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Asset.swift"; sourceTree = "<group>"; };
 		6B5941C9065B9E0585F1CA89 /* Pods_clearscoretest.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_clearscoretest.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E7DFFAE9362F4E8A7A5D3DE8 /* Pods-clearscoretest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-clearscoretest.debug.xcconfig"; path = "Target Support Files/Pods-clearscoretest/Pods-clearscoretest.debug.xcconfig"; sourceTree = "<group>"; };
 		EC73DD33A05E4502BC9DFFED /* Pods-clearscoretest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-clearscoretest.release.xcconfig"; path = "Target Support Files/Pods-clearscoretest/Pods-clearscoretest.release.xcconfig"; sourceTree = "<group>"; };
@@ -139,6 +141,7 @@
 			children = (
 				512F13FC276F9231007298B0 /* String+Localisable.swift */,
 				512F1404276F95E2007298B0 /* UIView+Constraints.swift */,
+				512F1406276FA936007298B0 /* UIColor+Asset.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -280,6 +283,7 @@
 				512F1405276F95E2007298B0 /* UIView+Constraints.swift in Sources */,
 				512F13FD276F9231007298B0 /* String+Localisable.swift in Sources */,
 				512F13DB276F8E4D007298B0 /* AppDelegate.swift in Sources */,
+				512F1407276FA936007298B0 /* UIColor+Asset.swift in Sources */,
 				512F1403276F950A007298B0 /* ProgressView.swift in Sources */,
 				512F13DD276F8E4D007298B0 /* SceneDelegate.swift in Sources */,
 				512F13F8276F9123007298B0 /* DashboardViewController.swift in Sources */,

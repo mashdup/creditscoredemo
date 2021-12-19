@@ -22,9 +22,14 @@ class DashboardViewController: UIViewController {
         setupViews()
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        dashboardScoreView.progressView.progress = 0.8
+    }
+    
     func setup() {
         title = "DASHBOARD".localised()
-        view.backgroundColor = .white
+        view.backgroundColor = .primaryBackground
     }
     
     func setupViews() {

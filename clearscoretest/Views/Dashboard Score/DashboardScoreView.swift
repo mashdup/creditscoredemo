@@ -9,7 +9,7 @@ import UIKit
 
 class DashboardScoreView: UIView {
     
-    private lazy var progressView: ProgressView = {
+    lazy var progressView: ProgressView = {
         let p = ProgressView()
         p.translatesAutoresizingMaskIntoConstraints = false
         return p
@@ -30,6 +30,7 @@ class DashboardScoreView: UIView {
         l.translatesAutoresizingMaskIntoConstraints = false
         l.text = "DASHBOARD_CREDIT_TITLE".localised()
         l.font = .preferredFont(forTextStyle: .body)
+        l.textColor = .primaryFont
         l.adjustsFontForContentSizeCategory = true
         return l
     }()
@@ -39,17 +40,18 @@ class DashboardScoreView: UIView {
         l.translatesAutoresizingMaskIntoConstraints = false
         l.text = "327"
         l.font = .systemFont(ofSize: 64, weight: .light)
-//        l.font = .preferredFont(forTextStyle: .largeTitle)
         l.adjustsFontForContentSizeCategory = true
+        l.textColor = .primaryFont
         return l
     }()
     
     private lazy var subtitleLabel: UILabel = {
         let l = UILabel()
         l.translatesAutoresizingMaskIntoConstraints = false
-        l.text = "DASHBOARD_OUT_OF".localised()
+        l.text = "DASHBOARD_OUT_OF".localised() + " 700"
         l.font = .preferredFont(forTextStyle: .body)
         l.adjustsFontForContentSizeCategory = true
+        l.textColor = .primaryFont
         return l
     }()
     
@@ -66,10 +68,11 @@ class DashboardScoreView: UIView {
     override func layoutSubviews() {
         super.layoutSubviews()
         layer.cornerRadius = bounds.width/2
+        layer.borderColor = UIColor.primaryFont.cgColor
     }
     
     func setup() {
-        layer.borderColor = UIColor.black.cgColor
+        
         layer.borderWidth = 2
         
         addSubview(progressView)

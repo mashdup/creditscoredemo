@@ -9,18 +9,9 @@ import UIKit
 
 class ProgressView: UIView {
     
-    var progress: CGFloat = 0.48 {
+    var progress: CGFloat = 0 {
         didSet {
             setProgress(progress)
-        }
-    }
-    
-    private var progressColour: CGColor {
-        switch progress {
-        case -CGFloat.greatestFiniteMagnitude..<0.33: return UIColor.red.cgColor
-        case 0.33..<0.66: return UIColor.systemYellow.cgColor
-        case 0.66 ..< CGFloat.greatestFiniteMagnitude: return UIColor.green.cgColor
-        default: return UIColor.red.cgColor
         }
     }
     
@@ -44,7 +35,7 @@ class ProgressView: UIView {
             startAngle: -.pi / 2, endAngle: 3 * .pi / 2,
             clockwise: true)
         progressLayer.path = circularPath.cgPath
-        progressLayer.strokeColor = progressColour
+        progressLayer.strokeColor = UIColor.progressColour(progress).cgColor
     }
     
     func setup() {
@@ -52,7 +43,7 @@ class ProgressView: UIView {
         progressLayer.fillColor = UIColor.clear.cgColor
         progressLayer.lineWidth = 4
         progressLayer.strokeEnd = 0
-        progressLayer.strokeColor = progressColour
+        progressLayer.strokeColor = UIColor.progressColour(progress).cgColor
 //        progressLayer.shadowColor = UIColor.black.cgColor
         progressLayer.shadowOpacity = 0.2
         progressLayer.shadowRadius = 4
@@ -63,24 +54,34 @@ class ProgressView: UIView {
             heightAnchor.constraint(equalTo: widthAnchor),
             widthAnchor.constraint(greaterThanOrEqualToConstant: 64)
         ])
-        setProgress(progress)
+//        setProgress(progress)
     }
     
     func setProgress(_ progress: CGFloat, with duration: TimeInterval = 0.3, animated: Bool = true) {
         
+        
         CATransaction.begin()
         CATransaction.disableActions()
-        progressLayer.strokeEnd = progress
-        progressLayer.strokeColor = progressColour
-        CATransaction.commit()
         if animated {
             
             let anim = CABasicAnimation(keyPath: "strokeEnd")
             anim.duration = duration
             anim.toValue = progress
             anim.fillMode = .forwards
-            anim.isRemovedOnCompletion = true
+            anim.isRemovedOnCompletion = false
             progressLayer.add(anim, forKey: "progressAnim")
+            
+            let colourAnim = CABasicAnimation(keyPath: "strokeColor")
+            colourAnim.toValue = UIColor.progressColour(progress).cgColor
+            colourAnim.isRemovedOnCompletion = false
+            colourAnim.fillMode = .forwards
+            colourAnim.duration = duration
+            progressLayer.add(colourAnim, forKey: "colourAnim")
+            
+        } else {
+            progressLayer.strokeEnd = progress
+            progressLayer.strokeColor = UIColor.progressColour(progress).cgColor
         }
+        CATransaction.commit()
     }
 }
